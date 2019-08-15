@@ -1,0 +1,78 @@
+#app{
+    background: radial-gradient(#ccc, #000);
+    box-sizing: border-box;
+    margin: 0 ;
+    padding:200px 0;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+/*    grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));*/
+}
+
+.card{
+    display: inline-block;
+    position: relative;
+    margin: 20px;
+    height: 230px;
+    width: calc(1000px/4);
+    
+}
+
+.card:hover > .top {
+    background-color: black;
+    border: white solid 1px;
+    bottom: 50%;
+    z-index: 3;
+}
+
+.card:hover > .bottom {
+    border: white solid 1px;
+    top: 50%;
+    opacity: 1;
+}
+
+.top{
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient();
+    transition: bottom 200ms;
+}
+
+.top > img {
+    width: 60%;
+    display: block;
+    padding: 10px 0;
+    margin: 0 auto;
+    filter: invert(97%) sepia(1%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
+
+.top > h3 {
+    text-align: center;
+    color: white;
+}
+
+.bottom{
+    padding: 5px;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: top 300ms, opacity 200ms;
+    
+}
+
+.bottom > p{
+    color: grey;
+    font-weight: bold;
+}
+
+.bottom > button{
+    cursor: pointer;
+    background-color: #ccc;
+    border: #ccc solid 1px;
+}
